@@ -1,7 +1,7 @@
 package me.djyugg.koin22androidsample
 
 import android.app.Application
-import me.djyugg.koin22androidsample.koinSample.module.sampleModule
+import me.djyugg.koin22androidsample.koinSample.scope.module.sampleModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Koin22AndroidSample">
-        <activity android:name=".koinSample.kotlin.UseScopeActivityKotlinActivity"></activity>
+        <activity android:name="me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseKoinScopeComponentKotlinActivity"/>
+        <activity android:name="me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeActivityKotlinActivity" />
+        <activity android:name=".koinSample.scope.java.UseScopeActivityJavaActivity"/>
+        <activity android:name=".koinSample.scope.java.UseScopeJavaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
