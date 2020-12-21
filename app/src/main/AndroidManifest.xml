@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Koin22AndroidSample">
         <activity android:name=".koinSample.scope.kotlin.UseKoinScopeComponentKotlinActivity"/>
         <activity android:name=".koinSample.scope.kotlin.UseScopeActivityKotlinActivity" />
+        <activity android:name=".koinSample.scope.kotlin.UseScopeActivityWithFragmentKotlinActivity" />
         <activity android:name=".koinSample.scope.java.UseScopeActivityJavaActivity"/>
         <activity android:name=".koinSample.scope.java.UseScopeJavaActivity" />
         <activity android:name=".MainActivity">
