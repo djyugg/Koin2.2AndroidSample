@@ -20,7 +20,6 @@ val sampleModule = module {
         viewModel { SampleViewModel() }
     }
 
-
     scope<UseKoinScopeComponentKotlinActivity> {
         scoped { SampleClass() }
         viewModel { SampleViewModel() }
