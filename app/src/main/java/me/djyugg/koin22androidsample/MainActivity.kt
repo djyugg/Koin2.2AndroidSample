@@ -8,6 +8,7 @@ import me.djyugg.koin22androidsample.koinSample.scope.java.UseScopeJavaActivity
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseKoinScopeComponentKotlinActivity
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeActivityKotlinActivity
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeActivityWithFragmentKotlinActivity
+import me.djyugg.koin22androidsample.koinSample.workManager.WorkManagerActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button5).setOnClickListener {
             startActivity(UseScopeActivityWithFragmentKotlinActivity.createIntent(this))
+        }
+
+        findViewById<Button>(R.id.button6).setOnClickListener {
+            startActivity(WorkManagerActivity.createIntent(this))
         }
     }
 }

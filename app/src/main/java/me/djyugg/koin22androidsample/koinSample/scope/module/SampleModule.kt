@@ -1,5 +1,6 @@
 package me.djyugg.koin22androidsample.koinSample.scope.module
 
+import androidx.work.WorkerParameters
 import me.djyugg.koin22androidsample.koinSample.scope.LinkToSampleClass
 import me.djyugg.koin22androidsample.koinSample.scope.SampleClass
 import me.djyugg.koin22androidsample.koinSample.scope.SampleViewModel
@@ -10,7 +11,9 @@ import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseKoinScopeCompone
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeActivityKotlinActivity
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeActivityWithFragmentKotlinActivity
 import me.djyugg.koin22androidsample.koinSample.scope.kotlin.UseScopeFragmentKotlinFragment
+import me.djyugg.koin22androidsample.koinSample.workManager.SampleWorker
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.androidx.workmanager.dsl.worker
 import org.koin.dsl.module
 
 val sampleModule = module {
@@ -41,5 +44,9 @@ val sampleModule = module {
     scope<UseScopeFragmentKotlinFragment> {
         scoped { SampleClass() }
         viewModel { LinkToSampleViewModel(linkToSampleClass = get()) }
+    }
+
+    worker { (params: WorkerParameters) ->
+        SampleWorker(get(), params, SampleClass())
     }
 }
