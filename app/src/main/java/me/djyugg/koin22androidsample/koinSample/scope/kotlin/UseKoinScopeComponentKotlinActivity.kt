@@ -34,6 +34,11 @@ class UseKoinScopeComponentKotlinActivity : AppCompatActivity(), KoinScopeCompon
         sampleViewModel.updateText(text)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        scope.close()
+    }
+
     companion object {
         fun createIntent(context: Context): Intent =
             Intent(context, UseKoinScopeComponentKotlinActivity::class.java)

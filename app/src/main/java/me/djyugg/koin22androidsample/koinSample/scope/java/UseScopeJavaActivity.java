@@ -58,4 +58,10 @@ public class UseScopeJavaActivity extends AppCompatActivity {
         final String text = sampleClass.getText();
         sampleViewModel.updateText(text);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        scope.close();
+    }
 }
